@@ -23,6 +23,10 @@ hud.stopHUD()
  - Add blur background
  - support cocoapods
 
+### Animation from
+
+https://www.lottiefiles.com/1149-veil  ❤️
+
 License
 ----
 
