@@ -4,6 +4,8 @@
 
 Simple way to handle Lottie Hud 
 
+https://media.giphy.com/media/3oFzlYTNo0mUYGcmg8/giphy.gif
+
 ### Installation
 
 Just drag `LottieHUD.swift` into your project
