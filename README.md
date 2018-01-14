@@ -4,7 +4,7 @@
 
 Simple way to handle Lottie Hud 
 
-https://media.giphy.com/media/3oFzlYTNo0mUYGcmg8/giphy.gif
+![Example](https://media.giphy.com/media/3oFzlYTNo0mUYGcmg8/giphy.gif)
 
 ### Installation
 
