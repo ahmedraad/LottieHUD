@@ -12,8 +12,8 @@ import UIKit
 
 class LottieHUD {
     
-    public var animationDuration: TimeInterval = 0.3
-    public static var shadow: CGFloat = 0.7
+    var animationDuration: TimeInterval = 0.3
+    static var shadow: CGFloat = 0.7
     
     private var backgroundView: UIView = {
         let bg = UIView()
