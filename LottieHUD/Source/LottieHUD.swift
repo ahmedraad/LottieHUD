@@ -10,19 +10,33 @@ import Foundation
 import Lottie
 import UIKit
 
-class LottieHUD {
+
+
+public enum LottieHUDMaskType {
+    case solid
+}
+
+public final class LottieHUD {
     
-    var animationDuration: TimeInterval = 0.3
-    static var shadow: CGFloat = 0.7
+    public struct LottieHUDConfig {
+        
+        static var shadow: CGFloat = 0.7
+        static var animationDuration: TimeInterval = 0.3
+    }
     
-    private var backgroundView: UIView = {
+    private var maskView: UIView = {
         let bg = UIView()
         bg.translatesAutoresizingMaskIntoConstraints = false
-        bg.backgroundColor = UIColor.black.withAlphaComponent(shadow)
         bg.isUserInteractionEnabled = false
         bg.alpha = 0.0
         return bg
     }()
+    
+    
+    // Not implemeted yet :)
+    //    public var blurMaskType: UIBlurEffect = UIBlurEffect(style: .dark)
+    
+    private var _lottie: LOTAnimationView!
     
     public var contentMode: UIViewContentMode = .scaleAspectFit {
         didSet {
@@ -30,13 +44,10 @@ class LottieHUD {
         }
     }
     
-    public var frame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 200)
+    public var maskType: LottieHUDMaskType = .solid
+
+    public var size: CGSize = CGSize(width: 200, height: 200)
     
-    private var _lottie: LOTAnimationView = {
-        var lt = LOTAnimationView()
-        lt.loopAnimation = true
-        return lt
-    }()
     
     init(_ name: String, loop: Bool = true) {
         self._lottie = LOTAnimationView(name: name)
@@ -59,15 +70,11 @@ class LottieHUD {
     private func createHUD(delay: TimeInterval = 0.0) {
         DispatchQueue.main.async {
             UIApplication.shared.keyWindow!.isUserInteractionEnabled = false
-            self.backgroundView.addSubview(self._lottie)
-            self._lottie.frame = self.frame
-            
-            self.keyWindow.view.addSubview(self.backgroundView)
-            self.backgroundView.frame = self.keyWindow.view.bounds
-            self._lottie.center = self.backgroundView.center
-            
-            UIView.animate(withDuration: self.animationDuration, delay: delay, options: .curveEaseIn, animations: {
-                self.backgroundView.alpha = 1.0
+            self.configureMask()
+            self.configureConstraints()
+            UIView.animate(withDuration: LottieHUDConfig.animationDuration, delay: delay, options: .curveEaseIn, animations: {
+                
+                self.maskView.alpha = 1.0
             }, completion: nil)
             
             self._lottie.play(completion: { _ in
@@ -76,13 +83,42 @@ class LottieHUD {
         }
     }
     
+    private func configureMask() {
+        if maskType == .solid {
+            maskView.backgroundColor = UIColor.black.withAlphaComponent(LottieHUDConfig.shadow)
+        } else {
+            // Not implemented yet
+        }
+    }
+    
+    private func configureConstraints() {
+        // Configure Backround View Constraints
+        self.keyWindow.view.addSubview(self.maskView)
+        
+        guard let keyWindowMargins = keyWindow.view else {return}
+        
+        maskView.leadingAnchor.constraint(equalTo: keyWindowMargins.leadingAnchor, constant: 0).isActive = true
+        maskView.trailingAnchor.constraint(equalTo: keyWindowMargins.trailingAnchor, constant: 0).isActive = true
+        maskView.topAnchor.constraint(equalTo: keyWindowMargins.topAnchor).isActive = true
+        maskView.bottomAnchor.constraint(equalTo: keyWindowMargins.bottomAnchor).isActive = true
+        
+        maskView.addSubview(_lottie)
+
+        // Configure Lottie Constraints
+        _lottie.translatesAutoresizingMaskIntoConstraints = false
+        _lottie.centerXAnchor.constraint(equalTo: maskView.centerXAnchor, constant: 0).isActive = true
+        _lottie.centerYAnchor.constraint(equalTo: maskView.centerYAnchor, constant: 0).isActive = true
+        _lottie.heightAnchor.constraint(equalToConstant: size.height).isActive = true
+        _lottie.widthAnchor.constraint(equalToConstant: size.width).isActive = true
+    }
+    
     private func clearHUD() {
         DispatchQueue.main.async {
-            UIView.animate(withDuration: self.animationDuration, delay: 0, options: .curveEaseIn, animations: {
-                self.backgroundView.alpha = 0.0
+            UIView.animate(withDuration: LottieHUDConfig.animationDuration, delay: 0, options: .curveEaseIn, animations: {
+                self.maskView.alpha = 0.0
             }) { finished in
                 UIApplication.shared.keyWindow!.isUserInteractionEnabled = true
-                self.backgroundView.removeFromSuperview()
+                self.maskView.removeFromSuperview()
                 self._lottie.stop()
             }
         }

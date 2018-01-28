@@ -19,13 +19,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showClick(_ sender: UIButton) {
-        
         switch sender.tag {
         case 1:
             hud.showHUD()
             Timer.scheduledTimer(timeInterval: 8, target: self, selector: #selector(dismissHUD), userInfo: nil, repeats: false)
         case 2:
-            hud.showHUD(with: 2.0)
+            LottieHUD("veil").showHUD(with: 2.0)
         case 3:
             // default is True
             hud.showHUD(loop: false)
