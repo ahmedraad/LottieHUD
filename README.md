@@ -34,3 +34,4 @@ License
 
 MIT
 
+https://app.fossa.io/projects/git%2Bgithub.com%2Fahmedraad%2FLottieHUD?utm_source=share_link
