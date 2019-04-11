@@ -1,1 +1,2 @@
 github "airbnb/lottie-ios" "master"
+github "SnapKit/SnapKit"
