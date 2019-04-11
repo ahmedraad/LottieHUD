@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E23A0733225DEEF900AA7224 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23A0732225DEEF900AA7224 /* SnapKit.framework */; };
+		E23A0739225E459300AA7224 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = E23A0738225E459300AA7224 /* animation.json */; };
+		E2898BE4225CBB21008894E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2898BE3225CBB21008894E3 /* AppDelegate.swift */; };
+		E2898BE6225CBB21008894E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2898BE5225CBB21008894E3 /* ViewController.swift */; };
+		E2898BE9225CBB21008894E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2898BE7225CBB21008894E3 /* Main.storyboard */; };
+		E2898BEB225CBB23008894E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2898BEA225CBB23008894E3 /* Assets.xcassets */; };
+		E2898BEE225CBB23008894E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2898BEC225CBB23008894E3 /* LaunchScreen.storyboard */; };
 		E2A29A70225BABB4001013D5 /* LottieHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A29A66225BABB4001013D5 /* LottieHUD.framework */; };
 		E2A29A75225BABB4001013D5 /* LottieHUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A29A74225BABB4001013D5 /* LottieHUDTests.swift */; };
 		E2A29A77225BABB4001013D5 /* LottieHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A29A69225BABB4001013D5 /* LottieHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -14,7 +21,6 @@
 		E2A29A87225BB394001013D5 /* LottieHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A29A86225BB394001013D5 /* LottieHUD.swift */; };
 		E2A29A89225BB4F7001013D5 /* LottieHUDEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A29A88225BB4F7001013D5 /* LottieHUDEnums.swift */; };
 		E2A29A8B225BBC40001013D5 /* LottieHUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A29A8A225BBC40001013D5 /* LottieHUDView.swift */; };
-		E2A29A8D225BBDC0001013D5 /* LottieHUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A29A8C225BBDC0001013D5 /* LottieHUDController.swift */; };
 		E2A29A8F225BBDE9001013D5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A29A8E225BBDE9001013D5 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +35,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E23A0732225DEEF900AA7224 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		E23A0738225E459300AA7224 /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
+		E2898BE1225CBB21008894E3 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2898BE3225CBB21008894E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2898BE5225CBB21008894E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E2898BE8225CBB21008894E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2898BEA225CBB23008894E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2898BED225CBB23008894E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2898BEF225CBB23008894E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2A29A66225BABB4001013D5 /* LottieHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LottieHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A29A69225BABB4001013D5 /* LottieHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LottieHUD.h; sourceTree = "<group>"; };
 		E2A29A6A225BABB4001013D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,15 +54,22 @@
 		E2A29A86225BB394001013D5 /* LottieHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieHUD.swift; sourceTree = "<group>"; };
 		E2A29A88225BB4F7001013D5 /* LottieHUDEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieHUDEnums.swift; sourceTree = "<group>"; };
 		E2A29A8A225BBC40001013D5 /* LottieHUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieHUDView.swift; sourceTree = "<group>"; };
-		E2A29A8C225BBDC0001013D5 /* LottieHUDController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieHUDController.swift; sourceTree = "<group>"; };
 		E2A29A8E225BBDE9001013D5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E2898BDE225CBB21008894E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2A29A63225BABB4001013D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E23A0733225DEEF900AA7224 /* SnapKit.framework in Frameworks */,
 				E2A29A82225BB330001013D5 /* Lottie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,11 +85,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2898BE2225CBB21008894E3 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				E2898BF3225CC03F008894E3 /* Assets */,
+				E2898BE3225CBB21008894E3 /* AppDelegate.swift */,
+				E2898BE5225CBB21008894E3 /* ViewController.swift */,
+				E2898BE7225CBB21008894E3 /* Main.storyboard */,
+				E2898BEA225CBB23008894E3 /* Assets.xcassets */,
+				E2898BEC225CBB23008894E3 /* LaunchScreen.storyboard */,
+				E2898BEF225CBB23008894E3 /* Info.plist */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		E2898BF3225CC03F008894E3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E23A0738225E459300AA7224 /* animation.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		E2A29A5C225BABB4001013D5 = {
 			isa = PBXGroup;
 			children = (
 				E2A29A68225BABB4001013D5 /* LottieHUD */,
 				E2A29A73225BABB4001013D5 /* LottieHUDTests */,
+				E2898BE2225CBB21008894E3 /* Example */,
 				E2A29A67225BABB4001013D5 /* Products */,
 				E2A29A80225BB330001013D5 /* Frameworks */,
 			);
@@ -78,6 +123,7 @@
 			children = (
 				E2A29A66225BABB4001013D5 /* LottieHUD.framework */,
 				E2A29A6F225BABB4001013D5 /* LottieHUDTests.xctest */,
+				E2898BE1225CBB21008894E3 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +150,7 @@
 		E2A29A80225BB330001013D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E23A0732225DEEF900AA7224 /* SnapKit.framework */,
 				E2A29A81225BB330001013D5 /* Lottie.framework */,
 			);
 			name = Frameworks;
@@ -115,7 +162,6 @@
 				E2A29A86225BB394001013D5 /* LottieHUD.swift */,
 				E2A29A88225BB4F7001013D5 /* LottieHUDEnums.swift */,
 				E2A29A8A225BBC40001013D5 /* LottieHUDView.swift */,
-				E2A29A8C225BBDC0001013D5 /* LottieHUDController.swift */,
 				E2A29A8E225BBDE9001013D5 /* Extensions.swift */,
 			);
 			path = Classes;
@@ -135,6 +181,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		E2898BE0225CBB21008894E3 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2898BF2225CBB23008894E3 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				E2898BDD225CBB21008894E3 /* Sources */,
+				E2898BDE225CBB21008894E3 /* Frameworks */,
+				E2898BDF225CBB21008894E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Example;
+			productName = Example;
+			productReference = E2898BE1225CBB21008894E3 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 		E2A29A65225BABB4001013D5 /* LottieHUD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2A29A7A225BABB4001013D5 /* Build configuration list for PBXNativeTarget "LottieHUD" */;
@@ -182,6 +245,9 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Ahmed Raad";
 				TargetAttributes = {
+					E2898BE0225CBB21008894E3 = {
+						CreatedOnToolsVersion = 10.2;
+					};
 					E2A29A65225BABB4001013D5 = {
 						CreatedOnToolsVersion = 10.2;
 						LastSwiftMigration = 1020;
@@ -197,6 +263,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = E2A29A5C225BABB4001013D5;
 			productRefGroup = E2A29A67225BABB4001013D5 /* Products */;
@@ -205,11 +272,23 @@
 			targets = (
 				E2A29A65225BABB4001013D5 /* LottieHUD */,
 				E2A29A6E225BABB4001013D5 /* LottieHUDTests */,
+				E2898BE0225CBB21008894E3 /* Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E2898BDF225CBB21008894E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2898BEE225CBB23008894E3 /* LaunchScreen.storyboard in Resources */,
+				E2898BEB225CBB23008894E3 /* Assets.xcassets in Resources */,
+				E23A0739225E459300AA7224 /* animation.json in Resources */,
+				E2898BE9225CBB21008894E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2A29A64225BABB4001013D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +315,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -248,6 +328,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E2898BDD225CBB21008894E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2898BE6225CBB21008894E3 /* ViewController.swift in Sources */,
+				E2898BE4225CBB21008894E3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2A29A62225BABB4001013D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,7 +344,6 @@
 				E2A29A8F225BBDE9001013D5 /* Extensions.swift in Sources */,
 				E2A29A89225BB4F7001013D5 /* LottieHUDEnums.swift in Sources */,
 				E2A29A8B225BBC40001013D5 /* LottieHUDView.swift in Sources */,
-				E2A29A8D225BBDC0001013D5 /* LottieHUDController.swift in Sources */,
 				E2A29A87225BB394001013D5 /* LottieHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,7 +366,62 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		E2898BE7225CBB21008894E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2898BE8225CBB21008894E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2898BEC225CBB23008894E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2898BED225CBB23008894E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		E2898BF0225CBB23008894E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7D437XS93;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ahmedr.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2898BF1225CBB23008894E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7D437XS93;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ahmedr.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E2A29A78225BABB4001013D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -405,9 +548,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -439,6 +583,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -501,6 +646,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E2898BF2225CBB23008894E3 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2898BF0225CBB23008894E3 /* Debug */,
+				E2898BF1225CBB23008894E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E2A29A60225BABB4001013D5 /* Build configuration list for PBXProject "LottieHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
