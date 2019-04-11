@@ -9,14 +9,13 @@
 import Foundation
 import UIKit
 
-public enum LottieHUDFrameSize {
+public enum LottieHUDOverlaySize {
     
-    case full, squared, custom(CGSize)
+    case full, custom(CGSize)
     
     var size: CGSize {
         switch self {
         case .full: return UIScreen.main.bounds.size
-        case .squared: return CGSize(width: 200, height: 200)
         case .custom(let size): return size
         }
     }
@@ -26,15 +25,15 @@ public enum LottieHUDBackgroundStyle {
     
     case black, white, clear, custom(UIColor)
     
-    var backgroundView: UIView {
+    var backgroundView: UIControl {
         
-        let backgroundView = UIView()
-        
+        let backgroundView = UIControl()
+        backgroundView.alpha = 0
         switch self {
         case .black:
-            backgroundView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+            backgroundView.backgroundColor = UIColor(white: 0, alpha: 0.7)
         case .white:
-            backgroundView.backgroundColor = UIColor(white: 1, alpha: 0.5)
+            backgroundView.backgroundColor = UIColor(white: 1, alpha: 0.7)
         case .clear:
             backgroundView.backgroundColor = .clear
         case .custom(let color):
@@ -48,6 +47,6 @@ public enum LottieHUDBackgroundStyle {
 
 public enum LottieHUDFileSource {
     
-    case name(String), contentsOf(URL), json([AnyHashable: Any])
+    case name(String), remoteURL(URL), localPath(String)
     
 }
