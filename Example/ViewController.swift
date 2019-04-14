@@ -22,15 +22,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func show(_ sender: Any) {
-        let appearnce = LottieHUDAppearance.init(source: .name("animation"))
-        appearnce.overlaySize = .full
+        let appearnce = LottieHUDAppearance.init(source: .name("loading"))
+        appearnce.overlaySize = .custom(CGSize(width: 200, height: 200))
         appearnce.backgroundStyle = .black
+        appearnce.presentDuration = 0.5
         appearnce.corner = 15
-        LottieHUD.show(with: appearnce)
+        LottieHUD.show()
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
             LottieHUD.hide({
-                LottieHUD.show()
+                LottieHUD.show(with: appearnce)
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
                     LottieHUD.hide()
                 }

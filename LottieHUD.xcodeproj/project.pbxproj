@@ -14,6 +14,7 @@
 		E2898BE9225CBB21008894E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2898BE7225CBB21008894E3 /* Main.storyboard */; };
 		E2898BEB225CBB23008894E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2898BEA225CBB23008894E3 /* Assets.xcassets */; };
 		E2898BEE225CBB23008894E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2898BEC225CBB23008894E3 /* LaunchScreen.storyboard */; };
+		E2964EE7225F478E003F79D4 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = E2964EE6225F478E003F79D4 /* loading.json */; };
 		E2A29A70225BABB4001013D5 /* LottieHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A29A66225BABB4001013D5 /* LottieHUD.framework */; };
 		E2A29A75225BABB4001013D5 /* LottieHUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A29A74225BABB4001013D5 /* LottieHUDTests.swift */; };
 		E2A29A77225BABB4001013D5 /* LottieHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A29A69225BABB4001013D5 /* LottieHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +45,7 @@
 		E2898BEA225CBB23008894E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2898BED225CBB23008894E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2898BEF225CBB23008894E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2964EE6225F478E003F79D4 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		E2A29A66225BABB4001013D5 /* LottieHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LottieHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A29A69225BABB4001013D5 /* LottieHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LottieHUD.h; sourceTree = "<group>"; };
 		E2A29A6A225BABB4001013D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		E2898BF3225CC03F008894E3 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E2964EE6225F478E003F79D4 /* loading.json */,
 				E23A0738225E459300AA7224 /* animation.json */,
 			);
 			path = Assets;
@@ -286,6 +289,7 @@
 				E2898BEB225CBB23008894E3 /* Assets.xcassets in Resources */,
 				E23A0739225E459300AA7224 /* animation.json in Resources */,
 				E2898BE9225CBB21008894E3 /* Main.storyboard in Resources */,
+				E2964EE7225F478E003F79D4 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
