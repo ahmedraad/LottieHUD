@@ -28,14 +28,14 @@ public class LottieHUDAppearance {
     public var corner: CGFloat = 5.0
     /// if (true) the lottie animation will playing before presentation completion called (Default true).
     public var playImmediately = true
+    /// Will dismiss hud when finish works only when mode (playOnce) (Default false).
+    public var dismissWhenAnimationFinished = false
     
     public init(source: LottieHUDFileSource) {
         self.source = source
     }
     
-    public init() {
-        
-    }
+    public init() {}
 }
 
 public class LottieHUD {
@@ -80,17 +80,17 @@ public class LottieHUD {
 
 extension LottieHUD {
     
-    public static func show(with appearance: LottieHUDAppearance? = nil) {
+    public static func show(with appearance: LottieHUDAppearance? = nil, _ completion: LottieHUDCompletion? = nil) {
         
         if let currentAppearance = appearance {
             shared.currentAppearance = currentAppearance
-            shared.show(appearance: currentAppearance)
+            shared.show(appearance: currentAppearance, completion: completion)
         } else {
-            shared.show(appearance: shared.appearance)
+            shared.show(appearance: shared.appearance, completion: completion)
         }
     }
     
     public static func hide(_ completion: LottieHUDCompletion? = nil) {
-        shared.hide(completion: completion)
+        shared.dismiss(completion: completion)
     }
 }

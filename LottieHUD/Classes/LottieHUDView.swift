@@ -83,16 +83,16 @@ extension LottieHUD {
     }
     
     
-    func show(appearance: LottieHUDAppearance) {
+    func show(appearance: LottieHUDAppearance, completion: LottieHUDCompletion?) {
         configure(appearance: appearance)
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.configureUI(appearance: appearance)
-            strongSelf.fadeIn(appearance: appearance)
+            strongSelf.fadeIn(appearance: appearance, completion: completion)
         }
     }
     
-    func hide(completion: LottieHUDCompletion?) {
+    func dismiss(completion: LottieHUDCompletion?) {
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.fadeOut(completion: completion)
@@ -100,7 +100,7 @@ extension LottieHUD {
     }
     
     
-    private func fadeIn(appearance: LottieHUDAppearance) {
+    private func fadeIn(appearance: LottieHUDAppearance, completion: LottieHUDCompletion?) {
         UIView.animate(withDuration: appearance.presentDuration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveLinear, animations: { [weak self] in
             
             guard let strongSelf = self else { return }
@@ -114,12 +114,20 @@ extension LottieHUD {
             
             strongSelf.hudView.alpha = 1.0
             if appearance.playImmediately {
-                strongSelf.lottieAnimationView.play()
+                strongSelf.lottieAnimationView.play(completion: { _ in
+                    if appearance.dismissWhenAnimationFinished {
+                        strongSelf.dismiss(completion: completion)
+                    }
+                })
             }
             
         }) { _ in
             if !appearance.playImmediately {
-                self.lottieAnimationView.play()
+                self.lottieAnimationView.play(completion: { _ in
+                    if appearance.dismissWhenAnimationFinished {
+                        self.dismiss(completion: completion)
+                    }
+                })
             }
         }
     }
