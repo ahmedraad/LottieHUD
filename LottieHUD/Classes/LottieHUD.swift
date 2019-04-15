@@ -48,6 +48,8 @@ public class LottieHUD {
     
     fileprivate var completion: LottieHUDCompletion?
     
+    private(set) static var isBeingShown = false
+    
     var currentAppearance: LottieHUDAppearance?
     
     var keyWindow: UIWindow? {
@@ -82,6 +84,11 @@ extension LottieHUD {
     
     public static func show(with appearance: LottieHUDAppearance? = nil, _ completion: LottieHUDCompletion? = nil) {
         
+        if isBeingShown {
+            return
+        }
+        self.isBeingShown = true
+        
         if let currentAppearance = appearance {
             shared.currentAppearance = currentAppearance
             shared.show(appearance: currentAppearance, completion: completion)
@@ -91,6 +98,11 @@ extension LottieHUD {
     }
     
     public static func hide(_ completion: LottieHUDCompletion? = nil) {
+        if !self.isBeingShown {
+            return
+        }
+        self.isBeingShown = false
+        
         shared.dismiss(completion: completion)
     }
 }
